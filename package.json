@@ -1,0 +1,13 @@
+{
+  "name": "snaply",
+  "packageManager": "yarn@1.22.1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:jeanpierrecarvalho/snaply.git",
+  "author": "Jean-Pierre Carvalho <hello@jeanpierrecarvalho.pt>",
+  "license": "MIT",
+  "dependencies": {
+    "vite": "^5.4.3",
+    "vite-tsconfig-paths": "^5.0.1"
+  }
+}
