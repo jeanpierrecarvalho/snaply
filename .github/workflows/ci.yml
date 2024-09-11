@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node_version: [18]
+        node_version: [20.9.0]
       fail-fast: false
     timeout-minutes: 10
 
@@ -23,6 +23,11 @@ jobs:
         with:
           # Required for docs/versions tests
           fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.9.0'
 
       - name: Install deps
         run: yarn install
