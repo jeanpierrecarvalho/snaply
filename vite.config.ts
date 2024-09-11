@@ -1,5 +1,8 @@
 import { defineConfig } from "vite";
+import type { UserConfig } from "vite";
 
-export default defineConfig({
+const config: UserConfig = {
   build: {},
-});
+};
+
+export default defineConfig(config);
