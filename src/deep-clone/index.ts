@@ -1,82 +1,88 @@
-function deepClone(obj: any, seen = new WeakMap()) {
+// @ts-expect-error Todo: Solve types here
+function deepClone(obj, seen = new WeakMap()) {
   // Handle primitive types and null
-  if (obj === null || typeof obj !== "object") {
-    return obj;
+  if (obj === null || typeof obj !== 'object') {
+    return obj
   }
 
   // Handle circular references
   if (seen.has(obj)) {
-    return seen.get(obj);
+    return seen.get(obj)
   }
 
   // Handle Date
   if (obj instanceof Date) {
-    return new Date(obj.getTime());
+    return new Date(obj.getTime())
   }
 
   // Handle RegExp
   if (obj instanceof RegExp) {
-    return new RegExp(obj.source, obj.flags);
+    return new RegExp(obj.source, obj.flags)
   }
 
   // Handle Buffer (node.js specific)
   if (Buffer.isBuffer(obj)) {
-    return Buffer.from(obj);
+    return Buffer.from(obj)
   }
 
   // Handle Map
   if (obj instanceof Map) {
-    const result = new Map();
-    seen.set(obj, result);
+    const result = new Map()
+    seen.set(obj, result)
     obj.forEach((value, key) => {
-      result.set(key, deepClone(value, seen));
-    });
-    return result;
+      result.set(key, deepClone(value, seen))
+    })
+    return result
   }
 
   // Handle Set
   if (obj instanceof Set) {
-    const result = new Set();
-    seen.set(obj, result);
-    obj.forEach((value) => {
-      result.add(deepClone(value, seen));
-    });
-    return result;
+    const result = new Set()
+    seen.set(obj, result)
+    obj.forEach(value => {
+      result.add(deepClone(value, seen))
+    })
+    return result
   }
 
   // Handle Symbol
-  if (typeof obj === "symbol") {
-    return Symbol(obj.description);
+  if (typeof obj === 'symbol') {
+    return Symbol(obj.description)
   }
 
   // Skip functions
-  if (typeof obj === "function") {
-    return undefined;
+  if (typeof obj === 'function') {
+    return undefined
   }
 
   // Handle Array
   if (Array.isArray(obj)) {
-    const arrCopy: any[] = [];
-    seen.set(obj, arrCopy);
+    // @ts-expect-error Todo: Solve types here
+    const arrCopy = []
+    // @ts-expect-error Todo: Solve types here
+    seen.set(obj, arrCopy)
     obj.forEach((item, index) => {
-      arrCopy[index] = deepClone(item, seen);
-    });
-    return arrCopy;
+      arrCopy[index] = deepClone(item, seen)
+    })
+    // @ts-expect-error Todo: Solve types here
+    return arrCopy
   }
 
   // Handle plain objects
-  const objCopy: any = {};
-  seen.set(obj, objCopy);
-  Object.keys(obj).forEach((key) => {
-    const value = obj[key];
+
+  const objCopy = {}
+  seen.set(obj, objCopy)
+  Object.keys(obj).forEach(key => {
+    const value = obj[key]
 
     // Skip cloning functions
-    if (typeof value !== "function") {
-      objCopy[key] = deepClone(value, seen);
+    if (typeof value !== 'function') {
+      // @ts-expect-error Todo: Solve types here
+      objCopy[key] = deepClone(value, seen)
     }
-  });
+  })
 
-  return objCopy;
+  return objCopy
 }
 
-export default deepClone;
+export default deepClone
