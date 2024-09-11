@@ -1,18 +1,18 @@
 {
   "name": "snaply",
   "packageManager": "yarn@1.22.1",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "git@github.com:jeanpierrecarvalho/snaply.git",
   "author": "Jean-Pierre Carvalho <hello@jeanpierrecarvalho.pt>",
   "main": "dist/snaply.cjs.js",
-  "module": "dist/snaply.esm.js",
+  "module": "dist/snaply.es.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/snaply.esm.js",
+      "import": "./dist/snaply.es.js",
       "require": "./dist/snaply.cjs.js"
     },
     "./umd": "./dist/snaply.umd.js"
