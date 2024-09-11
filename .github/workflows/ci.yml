@@ -24,6 +24,11 @@ jobs:
           # Required for docs/versions tests
           fetch-depth: 0
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20.8.1'
+
       - name: Install deps
         run: yarn install
 
