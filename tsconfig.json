@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["**/*.ts", "vite.config.mjs"],
+  "include": ["**/*.ts", "vite.config.mjs", "eslint.config.js"],
   "exclude": ["node_modules"]
 }
