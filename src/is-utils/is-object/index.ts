@@ -7,6 +7,6 @@
  */
 
 const isObject = (value: unknown): boolean =>
-  typeof value === "object" || typeof value === "function";
+  typeof value === 'object' || typeof value === 'function'
 
-export default isObject;
+export default isObject
