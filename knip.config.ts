@@ -4,8 +4,9 @@ const config: KnipConfig = {
   workspaces: {
     '.': {
       entry: ['src/**/*'],
-      ignore: [],
-      ignoreDependencies: ['@eslint/eslintrc'],
+      ignore: ['rollup.config.dts.mjs'],
+      ignoreDependencies: ['@eslint/eslintrc', 'rollup-plugin-dts'],
+      ignoreBinaries: ['rollup'],
     },
   },
 }

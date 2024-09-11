@@ -14,6 +14,12 @@ const config = {
       formats: ['es', 'cjs', 'umd'],
       fileName: format => `snaply.${format}.js`,
     },
+    rollupOptions: {
+      external: [],
+      output: {
+        globals: {},
+      },
+    },
   },
   base: '',
   plugins: [tsconfigPaths()],
