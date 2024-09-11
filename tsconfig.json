@@ -1,34 +1,26 @@
 {
   "compilerOptions": {
-    "declaration": true,     
+    "declaration": true,
     "declarationDir": "dist/types",
-    "emitDeclarationOnly": true, 
-
+    "emitDeclarationOnly": true,
     "target": "ES2020",
     "useDefineForClassFields": true,
     "module": "ESNext",
     "skipLibCheck": true,
-
-    /* Bundler mode */
     "moduleResolution": "Bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-
-    /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    /* Alias*/
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-
-    "typeRoots": ["types"],
+    "typeRoots": ["types"]
   },
   "include": ["**/*.ts", "vite.config.mjs", "eslint.config.js"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", ".nx/*"]
 }

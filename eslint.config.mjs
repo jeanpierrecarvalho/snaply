@@ -32,6 +32,6 @@ export default [
   },
   ...compat.extends('plugin:@typescript-eslint/recommended'),
   {
-    ignores: ['dist/**', 'global.d.ts'],
+    ignores: ['dist/**', 'global.d.ts', '.nx/*'],
   },
 ]
