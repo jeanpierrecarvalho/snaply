@@ -4,3 +4,4 @@ yarn run lint
 yarn run lint-staged
 yarn run knip
 yarn run test
+yarn run build
