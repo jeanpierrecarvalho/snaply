@@ -1,3 +1,3 @@
-export * from "./deep-clone";
-export * from "./is-utils/is-function";
-export * from "./is-utils/is-object";
+export { default as deepClone } from "./deep-clone";
+export { default as isFunction } from "./is-utils/is-function";
+export { default as isObject } from "./is-utils/is-object";
