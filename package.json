@@ -1,6 +1,6 @@
 {
   "name": "snaply",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "repository": "git@github.com:jeanpierrecarvalho/snaply.git",
   "author": "Jean-Pierre Carvalho <hello@jeanpierrecarvalho.pt>",
   "main": "dist/snaply.cjs.js",

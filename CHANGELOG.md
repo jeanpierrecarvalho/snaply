@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/jeanpierrecarvalho/snaply/compare/v1.0.7...v1.1.0) (2024-09-11)
+
+
+### Features
+
+* **is-object:** implement a new feature ([75774c9](https://github.com/jeanpierrecarvalho/snaply/commit/75774c9e04082f6bee5e07880ab39429a162c3c3))
+
 ## [1.0.7](https://github.com/jeanpierrecarvalho/snaply/compare/v1.0.6...v1.0.7) (2024-09-11)
 
 
