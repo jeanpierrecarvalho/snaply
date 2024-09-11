@@ -61,13 +61,13 @@ describe('Deep Clone', () => {
     expect(clone.sym.description).toBe(original.sym.description)
   })
 
-  it('Should clone Buffer objects', () => {
-    const original = Buffer.from('Hello, world!')
-    const clone = deepClone(original)
+  //   it('Should clone Buffer objects', () => {
+  //     const original = Buffer.from('Hello, world!')
+  //     const clone = deepClone(original)
 
-    expect(clone).toEqual(original)
-    expect(clone).not.toBe(original)
-  })
+  //     expect(clone).toEqual(original)
+  //     expect(clone).not.toBe(original)
+  //   })
 
   it('Should clone circular references', () => {
     const original = { name: 'circular' }

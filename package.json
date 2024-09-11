@@ -1,7 +1,7 @@
 {
   "name": "snaply",
   "packageManager": "yarn@1.22.1",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "repository": "git@github.com:jeanpierrecarvalho/snaply.git",
   "author": "Jean-Pierre Carvalho <hello@jeanpierrecarvalho.pt>",
   "main": "dist/snaply.cjs.js",

@@ -20,10 +20,11 @@ function deepClone(obj, seen = new WeakMap()) {
     return new RegExp(obj.source, obj.flags)
   }
 
-  // Handle Buffer (node.js specific)
-  if (Buffer.isBuffer(obj)) {
-    return Buffer.from(obj)
-  }
+  //   // Handle Buffer (node.js specific)
+  // TODO: Causing issues, Buffer not defined
+  //   if (Buffer.isBuffer(obj)) {
+  //     return Buffer.from(obj)
+  //   }
 
   // Handle Map
   if (obj instanceof Map) {
